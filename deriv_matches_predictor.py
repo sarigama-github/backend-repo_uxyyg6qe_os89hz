@@ -105,8 +105,7 @@ async def subscribe_to_ticks(ws: websockets.WebSocketClientProtocol, symbol: str
             # No action needed; server keepalive
             continue
         elif msg.get("error"):
-            raise RuntimeError(f"WebSocket error for {symbol}: {msg['error']}
-            ")
+            raise RuntimeError(f"WebSocket error for {symbol}: {msg['error']}")
         # else: ignore other messages
 
 
